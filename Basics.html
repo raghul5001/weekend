@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+     <input type="text" placeholder="enter the Firstname" id="firstname"/>
+    
+     <input type="text" placeholder="enter the Lastname" id="lastname"/>
+
+      <input type="text" placeholder="enter the username" id="username"/>
+
+       <input type="password" placeholder="enter the password" id="password"/>
+            <button onclick="handlebasics()">Signup</button>
+     <script>
+      
+
+                function handlebasics(){
+
+        let fname = document.getElementById("firstname").value
+        let lname = document.getElementById("lastname").value
+          let user = document.getElementById("username").value
+            let pass = document.getElementById("password").value
+                    if(fname === '' || lname === '' || user === '' || pass === ''){
+                      alert("Pls fill all the details")
+                    }else{
+                      alert("Validation success")
+                      localStorage.setItem("firstname" , fname)
+                      localStorage.setItem("Lastname" , lname)
+                      localStorage.setItem("Username" , user)
+                      localStorage.setItem("password" , pass)
+                      window.location.href ="Login.html"
+                    }
+                }
+
+    </script>
+
+</body>
+</html>
